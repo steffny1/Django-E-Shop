@@ -9,8 +9,8 @@ from .models import Product
 
 def logout(request):
     django_logout(request)
-    domain = 'dev-n6167-al.au.auth0.com'
-    client_id = 'bau527h3kzqASeTNVcYzZF46R69qROuq'
+    domain = '<YOUR-AUTH0-DOMAIN>'
+    client_id = '<YOUR-AUTH0-CLIENT-ID>'
     return_to = 'http://localhost:8000'
     return HttpResponseRedirect(f'https://{domain}/v2/logout?client_id={client_id}&returnTo={return_to}')
 
